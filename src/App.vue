@@ -1,23 +1,50 @@
+/* eslint-disable */
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <header>
+      <nav>
+        <RouterLink to="/">Go to <strong>Home</strong></RouterLink>
+        &nbsp;
+        <RouterLink to="/randompick"> <strong>Random Pick</strong></RouterLink>
+        &nbsp;
+        <RouterLink to="/candidates"> <strong>Candidates</strong></RouterLink>
+        &nbsp;
+        <RouterLink to="/aboutme"> <strong>About Me</strong></RouterLink>
+        &nbsp;
+    </nav>
+    </header>
+    <body>
+
+   
+
+    <RouterView />
+    <RouterView name = "Home"></RouterView>
+    <RouterView name = "Carousel"></RouterView>
+    </body>
+    <footer> 
+      <a href="https://github.com/laurenshareshian/">
+      <img class="donkey-image" src="./assets/donkey.png" />
+  
+      </a>
+      <p> Made @ OSU </p>
+    </footer>
+    
   </div>
 </template>
 
-<script>
-export default {
-  name: 'App'
+<style scoped>
+footer p {
+  text-align: center !important;
 }
-</script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+a {
+    font-family: 'Open Sans';
+    text-decoration: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 40px;
+    padding:5px;
+    color: white;
+  }
 </style>
+
