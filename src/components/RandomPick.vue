@@ -22,9 +22,9 @@ export default {
     return {
       clicked: false,
       picNumber: null,
-      items: ["biden.png", "booker.jpg", "buttigieg.png",
-      "castro.jpg", "gabbard.jpg", "harris.jpg", "klobuchar.jpg",
-      "sanders.jpg", "sanders.png", "steyer.jpg", "warren.jpg", "yang.jpg"]
+      items: [require("../assets/biden.png"), require("../assets/booker.jpg"),require("../assets/buttigieg.png"),
+      require("../assets/castro.jpg"), require("../assets/gabbard.jpg"), require("../assets/harris.jpg"), require("../assets/klobuchar.jpg"),
+      require("../assets/sanders.jpg"), require("../assets/sanders.png"), require("../assets/steyer.png"), require("../assets/warren.jpg"), require("../assets/yang.jpg")]
     }
   },
   computed: {
