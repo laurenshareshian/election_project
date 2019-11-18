@@ -4,7 +4,7 @@
         <h2> {{candidate.name}} </h2>
         <p>{{candidate.title}} </p>
         <a :href=candidate.website>
-        <img src="../assets/biden.png" />
+        <img :src="require('../assets/' + candidate.pic)" />
         </a>
       </section>
     </div>
@@ -15,7 +15,7 @@
 export default {
   props: {
     candidate: Object
-    }
+  }
 };
 </script>
 

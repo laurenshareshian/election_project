@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 app.get('/api/getcandidates', (req, res) => {
     var candidates = [
-        {id: 1, name: 'Joe Biden', title: "Former Vice President", website: "https://joebiden.com/", pic: "../assets/biden.png"},
+        {id: 1, name: 'Joe Biden', title: "Former Vice President", website: "https://joebiden.com/", pic: 'biden.png'},
     ];
     // const candidatesStr = JSON.parse(candidates);
     console.log(candidates);
