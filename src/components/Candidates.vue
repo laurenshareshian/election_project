@@ -2,13 +2,33 @@
     <div class="random">
 
       <h1>Here are your candidates.</h1>
-
+      <div>
+      <Candidate v-for="candidate in candidates" v-bind:candidate="candidate" v-bind:key="candidate.id" ></Candidate>
+      </div>
  
     </div>
 </template>
 
 <script>
-
+import { getCandidates } from '../services/api';
+import Candidate from './Candidate'
+export default {
+  data() {
+    return { 
+      candidates: null
+    };
+  },
+  components: {
+    Candidate
+  },
+  created() {
+    getCandidates()
+    .then(candidates => {
+      console.log(candidates);
+      this.candidates = candidates;
+    });
+  },
+};
 
 
 </script>
