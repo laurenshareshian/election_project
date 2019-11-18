@@ -9,40 +9,52 @@
           <button v-on:click="generate"> Random Politician </button>
 
           <div v-if="clicked">
-            <img :src="mypic">
+            <img :src="require('../assets/' + mypic)">
           </div>
 
     </div>
 </template>
 
 <script>
-
+import { getCandidates } from '../services/api';
 export default {
   data() {
     return {
       clicked: false,
+      picItems: [],
       picNumber: null,
-      items: [require("../assets/biden.png"), require("../assets/booker.jpg"),require("../assets/buttigieg.png"),
-      require("../assets/castro.jpg"), require("../assets/gabbard.jpg"), require("../assets/harris.jpg"), require("../assets/klobuchar.jpg"),
-      require("../assets/sanders.jpg"), require("../assets/sanders.png"), require("../assets/steyer.png"), require("../assets/warren.jpg"), require("../assets/yang.jpg")]
     }
   },
   computed: {
     mypic() {
-
-    var item = this.items[this.picNumber];
-
+    var item = this.picItems[this.picNumber];
     return item;
     },
 
   },
-methods: {
+  created: function() {
+    this.fetchData();
+  },
+
+  methods: {
+    fetchData: function() {
+      // your fetch logic here
+
+      getCandidates()
+      .then(candidates => {
+        candidates.forEach(candidate => {
+            this.picItems.push(candidate.pic);
+        })
+      })
+    },
     generate: function()
     {
     this.clicked = true;
-    this.picNumber = Math.floor(Math.random()*this.items.length);       
+    this.picNumber = Math.floor(Math.random()*this.picItems.length);       
     }
-  }
+  },
+  
+  
 };
 
 
