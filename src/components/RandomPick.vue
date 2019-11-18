@@ -31,7 +31,6 @@ export default {
     mypic() {
 
     var item = this.items[this.picNumber];
-    console.log('../assets/'+item);
 
     return item;
     },
@@ -41,8 +40,7 @@ methods: {
     generate: function()
     {
     this.clicked = true;
-    this.picNumber = Math.floor(Math.random()*this.items.length);
-    console.log(this.picNumber);        
+    this.picNumber = Math.floor(Math.random()*this.items.length);       
     }
   }
 };

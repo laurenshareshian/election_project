@@ -59,6 +59,7 @@ export default {
       axios.post('http://httpbin.org/post', payload, config)
         .then((response) => {
           console.log(response.status);
+          console.log(response.data);
         })
         .then(user => {
           this.$router.push('/');

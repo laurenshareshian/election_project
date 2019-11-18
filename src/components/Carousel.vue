@@ -55,7 +55,6 @@ import { getCandidates } from '../services/api';
     created() {
     getCandidates()
     .then(candidates => {
-      console.log(candidates[0].pic);
       this.candidates = candidates;
     });
     }

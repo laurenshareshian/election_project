@@ -24,8 +24,6 @@ app.get('/api/getcandidates', (req, res) => {
         {id: 10, name: "Elizabeth Warren", title: "U.S. Senator, Massachusetts", website: 'https://elizabethwarren.com/', pic: 'warren.jpg'},
         {id: 11, name: 'Andrew Yang', title: 'Entrepeneur', website: "http://andrewyang.com/", pic: 'yang.jpg'},       
     ];
-    // const candidatesStr = JSON.parse(candidates);
-    console.log(candidates);
     res.send(JSON.stringify(candidates));
 });
 var os = require("os");
