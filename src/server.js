@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 1227;
 
-var politicians = require('./politicians.js');
+var politicians = require('./data/politicians.js');
 
 const cors = require('cors');
 // register it

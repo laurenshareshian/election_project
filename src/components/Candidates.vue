@@ -6,6 +6,9 @@
       <Candidate v-for="candidate in candidates" v-bind:candidate="candidate" v-bind:key="candidate.id" ></Candidate>
       </div>
  
+       <router-link to="/randompick">
+      <button> Still can't decide? </button>
+      </router-link>
     </div>
 </template>
 
@@ -54,6 +57,7 @@ button {
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 20px;
+    margin: 20px;
     font-weight: 600;
     box-shadow: -4px 2px 20px -6px rgba(0,0,0,0.75);
     transition: all .2s ease-in-out;

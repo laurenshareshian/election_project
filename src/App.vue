@@ -5,9 +5,9 @@
       <nav>
         <RouterLink to="/">Go to <strong>Home</strong></RouterLink>
         &nbsp;
-        <RouterLink to="/randompick"> <strong>Random Pick</strong></RouterLink>
-        &nbsp;
         <RouterLink to="/candidates"> <strong>Candidates</strong></RouterLink>
+        &nbsp;
+        <RouterLink to="/randompick"> <strong>Random Pick</strong></RouterLink>
         &nbsp;
         <RouterLink to="/aboutme"> <strong>About Me</strong></RouterLink>
         &nbsp;
