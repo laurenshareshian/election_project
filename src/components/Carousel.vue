@@ -16,19 +16,18 @@
 
   <!-- Text slides with image -->
     <template v-if="candidates">
-    <template v-for="candidate in candidates">
+      <template v-for="candidate in candidates">
 
-
-      <b-carousel-slide
-        :caption=candidate.name
-        :img-src="require('../assets/' + candidate.pic)"
-        img-width="100px"
-        img-height="100px"
-        width="100px"
-        height="100px"
-      ></b-carousel-slide>
-  </template>
-  </template>
+        <b-carousel-slide
+          :caption=candidate.name
+          :img-src="require('../assets/' + candidate.pic)"
+          img-width="100px"
+          img-height="100px"
+          width="100px"
+          height="100px"
+        ></b-carousel-slide>
+      </template>
+    </template>
     </b-carousel>
 
 

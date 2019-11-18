@@ -4,11 +4,13 @@
       <h1>About Me</h1>
       <img :src="require('../assets/me.png')" />
     <p>
-    Hi! I'm Lauren and I made this website for my OSU CS 290 Web Development Class. You can check out the GitHub code for my project <a href="http://www.github.com/laurenshareshian"> here </a> 
-    and find my LinkedIn profile <a href="https://www.linkedin.com/in/lauren-shareshian/"> here</a>. You can download my CV <a href="Resume2019.jpg" download> here</a>.
+    Hi! I'm Lauren and I made this website for my OSU CS 290 Web Development Class. 
+    <ul>
+    <li>You can check out the GitHub code for my project <a href="http://www.github.com/laurenshareshian"> here</a>. </li>
+    <li> You can find my LinkedIn profile <a href="https://www.linkedin.com/in/lauren-shareshian/"> here</a>. </li>
+    <li> You can download my CV <a :href="require('../assets/Resume2019.jpg')" download> <button>here</button></a> </li>
+    </ul>
     </p>
-
-
 
    <section class="contact-form" @submit.prevent="handleSubmit">
     <div>
@@ -56,7 +58,6 @@ export default {
       payload.message = this.message;
       axios.post('http://httpbin.org/post', payload, config)
         .then((response) => {
-          console.log(response.data);
           console.log(response.status);
         })
         .then(user => {
@@ -65,7 +66,8 @@ export default {
         .catch(err => {
           this.error = err;
         });
-  }
+  },
+
   }
 };
 
@@ -100,9 +102,7 @@ section {
   flex-direction: column;
   margin: auto;
 }
-button {
-  display: block;
-}
+
 input {
   display: block;
   margin-top: 20px;
@@ -121,10 +121,22 @@ input {
     margin-bottom: 200px;
 }
 
+button {
+    background: #fa504d;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 8px;
+    margin: 2px;
+    font-weight: 600;
+    box-shadow: -4px 2px 20px -6px rgba(0,0,0,0.75);
+    transition: all .2s ease-in-out;
+
+}
 button:hover {
     transform: scale(1.1); 
-} 
-
+}
 textarea {
   width:300px;
   height:300px;
