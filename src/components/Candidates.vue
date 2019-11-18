@@ -24,7 +24,7 @@ export default {
   created() {
     getCandidates()
     .then(candidates => {
-      console.log(candidates);
+      console.log('am i here', candidates);
       this.candidates = candidates;
     });
   },
