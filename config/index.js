@@ -13,7 +13,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://localhost:1227',
+        target: 'http://democratic-primary-server.herokuapp.com/api/getcandidates',
         changeOrigin: true
       }
     },
