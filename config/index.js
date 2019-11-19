@@ -4,7 +4,6 @@
 
 const path = require('path');
 const port = process.env.PORT || 8080;
-const host = process.env.HOST || 'localhost';
 
 module.exports = {
   dev: {
@@ -20,7 +19,7 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    host: host, // can be overwritten by process.env.HOST
+    host: 'localhost', // can be overwritten by process.env.HOST
     port: port, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
