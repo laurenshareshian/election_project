@@ -12,7 +12,7 @@ function getHeaders() {
 }
 
 export function getCandidates() {
-  return fetch('api/getcandidates/', {
+  return fetch('https://democratic-primary-server.herokuapp.com/api/getcandidates', {
     headers: getHeaders()
   })
     .then(responseHandler);
