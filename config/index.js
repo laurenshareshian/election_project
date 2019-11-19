@@ -13,10 +13,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-    target: 'http://localhost:1227',
-    changeOrigin: true
-    }
-  },
+        target: 'http://localhost:1227',
+        changeOrigin: true
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
