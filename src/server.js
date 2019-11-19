@@ -17,4 +17,4 @@ app.get('/api/getcandidates', (req, res) => {
 });
 var os = require("os");
 var hostname = os.hostname();
-app.listen(port, () => console.log(`Example app listening on port ${port}! ${hostname}`))
+app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${port}! ${hostname}`))
