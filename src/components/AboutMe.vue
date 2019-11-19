@@ -56,7 +56,7 @@ export default {
       this.error = null;
       var payload = {message: null};
       payload.message = this.message;
-      axios.post('http://httpbin.org/post', payload, config)
+      axios.post('https://httpbin.org/post', payload, config)
         .then((response) => {
           console.log(response.status);
           console.log(response.data);
